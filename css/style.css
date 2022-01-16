@@ -1,0 +1,22 @@
+#form-box{
+    /* border: 1px solid black; */
+    width: 30%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+#form-box > *{
+    display: block;
+    margin: 10px auto;
+}
+
+#form-box > input{
+    width: 45%;
+    height: 30px;
+}
+
+h1{
+    /* border: 1px solid black; */
+    width: fit-content;
+    margin: 100px;
+}
