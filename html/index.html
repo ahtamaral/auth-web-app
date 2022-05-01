@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authentication app</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
 </head>
 <body>
     
@@ -14,9 +15,9 @@
             Authentication app
         </h1>
         
-            <input type="text" placeholder="User">
-            <input type="password" placeholder="password">
-            <input type="button" value="Enter">
+            <input type="text" placeholder="User" id="usernameBox">
+            <input type="password" placeholder="password" id="passwordBox">
+            <input type="button" value="Enter" onclick="getCredentials()">
         
     </main>
 
