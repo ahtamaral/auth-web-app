@@ -1,8 +1,40 @@
-POST em /users
 
-body:
-	firstName: value
-	lastName: value
-	username: value
-	email: value
-	password: value
+User schema
+{
+	"firstName": "value",
+	"lastName": "value",
+	"username": "value",
+	"email": "value",
+	"password": "value"
+}
+
+Auth schema
+{
+	"username": "value",
+	"password": "value"
+}
+
+---
+Evento: Na página "createAccount.html", clicando no botão "Create User"
+Requisição: POST em '/users/new-user'
+Descrição: 
+Recebe um user schema (formatado em Json).
+Caso não exista um usuário igual em na tabela users do banco, registra-o.
+---
+
+---
+Evento: Na página "index.html", clicando no botão "Entrar"
+Requisição: POST em 'users/authenticate'
+Descrição:
+Recebe um auth schema. Compara os dados com aqueles guardados no banco.
+Se forem validados, retornar um "OK - Authenticated"
+Senão, retornar um "False"
+---
+
+---
+Evento: Na página "profile.html"
+Requisição: DELETE em 'profile/delete-account'
+Descrição:
+Recebe um auth schema e deleta no banco o usuário correspondente.
+---
+

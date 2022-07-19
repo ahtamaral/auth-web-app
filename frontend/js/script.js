@@ -174,6 +174,11 @@ const debug = function() {
     //     console.log(users)
     // })
     
-    fetch("http://localhost:3000")
-
+    fetch("http://localhost:3000") // Fetch é o método que acessa a URL. Ele retorna uma promessa, podendo ser "resolve" ou "reject"
+    .then( function(response) {        // Caso a promessa retornada seja "resolve", o método then é chamado.
+            console.log("Success!")
+        })
+        .catch( function() {   // Caso a promessa retornada seja reject, o método catch é chamado.
+            console.log("Failure :(")
+        })
 }
