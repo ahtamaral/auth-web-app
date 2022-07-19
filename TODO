@@ -1,0 +1,12 @@
+
+- Impedir que crie-se uma conta com um usuário que já exista no banco de dados.
+	- Ler da tabela users todos os campos "username" e checar se já não existe.
+	- O botão de create account aciona um método HTTP que primeiro checa isso.
+	- Se tudo estiver certo, aí sim ele insere a linha no banco de dados.
+- Página do usuário autenticado
+	- Mostra seus dados
+	- Tem botão para deletar sua conta. Ao clicar, é pedida sua senha para confirmar a operação.
+	- Ao confirmar a operação, chama um método da API que acha a linha correspondente àquele usuário
+	e a apaga.
+
+- Inserir foto do usuário.

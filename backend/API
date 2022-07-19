@@ -1,0 +1,8 @@
+POST em /users
+
+body:
+	firstName: value
+	lastName: value
+	username: value
+	email: value
+	password: value
