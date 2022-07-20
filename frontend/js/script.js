@@ -82,7 +82,9 @@ const createAccount = function() {
     }
     // AINDA DÁ PRA FAZER MAIS VALIDAÇÕES DE ENTRADA -> Checar caracteres chatos, limite superior para comprimento de nomes, etc.
 
-    registerUser(fName, lName, username, email, pass)
+    registerUser(fName, lName, username, email, pass) // Isso é carteado para ter um array em memória no momento.s
+
+    
 
     location.replace("../html/accountCreated.html")
 
@@ -174,7 +176,7 @@ const debug = function() {
     //     console.log(users)
     // })
     
-    fetch("http://localhost:3000") // Fetch é o método que acessa a URL. Ele retorna uma promessa, podendo ser "resolve" ou "reject"
+    fetch("http://localhost:3000/users/new-user") // Fetch é o método que acessa a URL. Ele retorna uma promessa, podendo ser "resolve" ou "reject"
     .then( function(response) {        // Caso a promessa retornada seja "resolve", o método then é chamado.
             console.log("Success!")
         })
