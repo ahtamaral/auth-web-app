@@ -1,11 +1,13 @@
 // Imports
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 var mysql = require('mysql');
 
 // Initializing express
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 
 const dbName = "authWebAppDb"
 
@@ -56,9 +58,7 @@ app.post('/users/new', (req, res) => {
 
 });
 
-app.listen(8080, () => console.log(`Started server at http://localhost:8080!`));
-
-
+app.listen(8080, () => console.log(`Started server at http://localhost:8080`));
 
 // // Importando módulo express.
 // var express = require("express")

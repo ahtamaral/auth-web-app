@@ -82,14 +82,31 @@ const createAccount = function() {
     }
     // AINDA DÁ PRA FAZER MAIS VALIDAÇÕES DE ENTRADA -> Checar caracteres chatos, limite superior para comprimento de nomes, etc.
 
-    registerUser(fName, lName, username, email, pass) // Isso é carteado para ter um array em memória no momento.s
+    // registerUser(fName, lName, username, email, pass) // Isso é carteado para ter um array em memória no momento.s
 
-    
+    reqBody = "firstName=" + fName + "&" +
+                "lastName=" + lName + "&" +
+                "username=" + username + "&" +
+                "email=" + email + "&" +
+                "password=" + pass
 
-    location.replace("../html/accountCreated.html")
+    var obj = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        },
+        body: reqBody
+    };
 
-    console.log("Successfully created new user:")
-    console.log(users[users.length-1])
+    fetch('http://localhost:8080/users/new', obj)
+    .then(function(res) {
+          
+    }); 
+
+    // location.replace("../html/accountCreated.html")
+
+    // console.log("Successfully created new user:")
+    // console.log(users[users.length-1])
 }
 
 const evaluateCredentials = function() {
